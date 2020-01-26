@@ -1,0 +1,25 @@
+CREATE DATABASE banco_acervo
+	CHARACTER SET latin1
+	COLLATE latin1_swedish_ci;
+
+
+CREATE TABLE banco_acervo.acervo (
+  id INT(11) NOT NULL AUTO_INCREMENT,
+  titulo VARCHAR(100) DEFAULT NULL,
+  autor VARCHAR(60) DEFAULT NULL,
+  ano DATE DEFAULT NULL,
+  preco DOUBLE DEFAULT NULL,
+  quantidade INT(11) DEFAULT NULL,
+  tipo INT(11) DEFAULT NULL,
+  id_editora INT(11) DEFAULT NULL,
+  PRIMARY KEY (id)
+)
+ENGINE = INNODB;
+
+
+CREATE TABLE banco_acervo.editora (
+  id INT(11) NOT NULL AUTO_INCREMENT,
+  nome VARCHAR(60) DEFAULT NULL,
+  PRIMARY KEY (id)
+)
+ENGINE = INNODB;
